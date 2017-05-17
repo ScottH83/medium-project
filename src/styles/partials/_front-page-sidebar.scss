@@ -1,0 +1,42 @@
+.side-content-bar {
+  font-size: .9rem;
+  font-weight: 300;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.top-stories-content, .author-picks-content, .stories-tag-content {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 2% 1%;
+    font-size: .8rem;
+
+    a {
+        color: #4c4c4c;
+
+    }
+
+    p {
+      padding: 2% 1%;
+    }
+}
+
+.write-story {
+  margin: 2%;
+}
+
+
+.front-page-footer {
+  font-size: .8rem;
+  font-weight: 300;
+  margin: 2% auto;
+
+  span {
+    padding: 2% 0;
+  }
+    a {
+        color: #7f7f7f;
+        margin: 3px;
+    }
+}

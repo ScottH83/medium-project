@@ -1,0 +1,73 @@
+.users-box {
+  margin: 0 auto;
+  width: 50%;
+
+  .user-info {
+    background-color: white;
+    border-bottom: 2px solid gray;
+    // display: flex;
+    // justify-content: center;
+    margin: 5% auto;
+    padding: 5% 5%;
+    width: 90%;
+  }
+}
+
+
+
+  .user-image-holder {
+    float: right;
+    height: 120px;
+    margin: 2%;
+    width: 120px;
+    border-radius: 50%;
+  }
+
+
+  .user-full-name{
+    display: inline-block;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 2%;
+    text-transform: capitalize;
+  }
+
+.user-stats{
+  display: block;
+  width: 100%;
+
+  .following, .followers {
+    display: inline-block;
+    font-size: 2rem;
+    margin: 1% 1% 1% 2%;
+    color: gray;
+  }
+
+
+  .description {
+    display: block;
+    font-size: .8rem;
+    margin: 1% 1% ;
+    width: 60%;
+  }
+
+  .twitter img {
+    max-height: 20px;
+  }
+
+  .follow-button, .delete-button {
+    background-color: white;
+    color: #00AB6C;
+    border: 2px solid #00AB6C;
+    font-size: .8rem;
+    padding: 2% 4%;
+    border-radius: 500px;
+    margin: 2% 0 0;
+  }
+
+  .delete-button {
+    color: red;
+    border: 2px solid red;
+  }
+
+}

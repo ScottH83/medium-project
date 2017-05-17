@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Medium-Crossover</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/main.css" />
+
+
+</head>
+
+<body>
+
+    <div class="sign-in-page hide">
+        <button class="close-div">X</button>
+        <div class="sign-in-form form">
+            <form class="register-form">
+                <input type="text" placeholder="name" />
+                <input type="text" placeholder="description" />
+                <input type="text" placeholder="image" />
+                <input class="create-user" type='submit' value="create" />
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+            </form>
+        </div>
+    </div>
+
+    <header>
+
+        <nav class="sign">
+            <div class="logo-image">
+                <img src="src/styles/images/medium-logos-master/logo/medium-m-color-100px.png">
+                <h1>
+                    Medium
+                </h1>
+            </div>
+            <div class="user-start">
+                <button class="author-write-story header">
+                    Write a story
+                </button>
+                <a class="sign-in-link" href="#">Sign in / Sign up</a>
+            </div>
+        </nav>
+        <nav class="categories">
+            <ul class="categories-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Top Stories</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">Technology</a></li>
+            </ul>
+            <ul class="users-tab">
+                <li> <a href="#">Users</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content-body">
+        <div class="users-box hide"></div>
+        <div class="stories-content-box">
+
+        </div>
+        <!-- user and tags aside container -->
+        <div class="side-content-bar">
+            <!-- this is a secondary wrap for ^ container  -->
+            <div class="aside-user-content">
+
+
+                <!-- Top stories -->
+                <div class="top-stories-content">
+                    <a href="#">
+                        <p class="aside-label">Top Stories</p>
+                    </a>
+                    <!-- Container with top stories and their author  -->
+                    <div class="user-top-stories-container">
+                        <!-- Individual user stories to be plugged in -->
+                        <div class="user-stories-container">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Authors Picks -->
+                <div class="author-picks-content">
+                    <a href="#">
+                        <p class="aside-label">Author's Picks</p>
+                    </a>
+                    <!-- Container with authors picks and their author  -->
+                    <div class="author-picks-stories-container">
+                        <!-- Individual author picks to be plugged in -->
+                        <div class="authors-picks">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- One Tag -->
+                <div class="stories-tag-content">
+                    <a href="#">
+                        <p class="aside-label">Tags</p>
+                    </a>
+                    <!-- Containers with stories to do with category  -->
+                    <div class="tag-stories-container">
+                        <!-- Individual stories with category -->
+                        <div class="tag-stories">
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="write-story">
+                    <button class="author-write-story"><a href="#">Write A Story</a> </button>
+                </div>
+
+
+            </div>
+
+
+            <footer class="front-page-footer">
+                <span><a href="#">Home</a></span>
+                <span><a href="#">Status</a></span>
+                <span><a href="#">Blog</a></span>
+                <span><a href="#">Careers</a></span>
+                <span><a href="#">Privacy</a></span>
+                <span><a href="#">Terms</a></span>
+                <span><a href="#">About</a></span>
+            </footer>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script id="post-template" type="text/x-handlebars-template">
+        <div class="post-container" data-id={{id}}>
+            <div class="post-author-info">
+                <div class="author-image-holder" style="background: url({{image}}); no-repeat; background-size: 100%;"></div>
+                <p class="user-full-name post-author-name" data-id={{id}}>{{fullName}}</p>
+                <span class="post-date">{{date}}</span>
+                <span class="post-length">{{postWordCount}}</span>
+            </div>
+            <div class="post-content">
+                <div class="post-image"><img src={{storyImage}}></div>
+                <h1 class="post-title">{{postTitle}}</h1>
+                <p class="read-more">Read More</p>
+            </div>
+            <div class="author-post-body hide">
+                {{body}}
+            </div>
+            <div class="social-bar post">
+                <img class="heart-favicon" src="http://bit.ly/2lr1FRv">
+                <p>{{favorited}}</p>
+                <p>{{responded}}</p>
+                <img class="bookmark-favicon" src="http://bit.ly/2kx7LAE">
+            </div>
+        </div>
+    </script>
+    <script id="side-bar-template" type="text/x-handlebars-template">
+        <div class="post-container-side-style" data-id={{id}}>
+            <div class="post-author-info-side-style">
+                <!-- // inline style the background image with handlebars -->
+                <div class="author-image-holder-side-style" style="background:url({{image}}); no-repeat; background-size: 100%;"></div>
+            </div>
+            <div class="post-content-side-style">
+                <h1 class="post-title-side-style">{{postTitle}}</h1>
+                <p class="post-author-name-side-style" data-id={{id}}>{{fullName}}</p>
+                <span class="post-date-side-style">{{date}}</span>
+            </div>
+        </div>
+    </script>
+    <script id="user-template" type="text/x-handlebars-template">
+        <div class="user-info" data-id={{id}}>
+            <div class="user-name-etc">
+                <div class="user-image-holder" style="background:url({{image}}) center no-repeat; background-size: 100%;"></div>
+                <p class="user-full-name">{{fullName}}</p>
+            </div>
+            <div class="user-stats">
+                <p class="following">{{randNum1}}</p>
+                <p class="followers">{{randNum2}}</p>
+                <p class="description">{{description}}</p>
+                <button class="follow-button">Follow</button>
+                <button class="delete-button" data-id={{id}}>Delete</button>
+            </div>
+        </div>
+    </script>
+    <script src="src/js/vendor/jquery-3.1.1.min.js "></script>
+    <script src="src/js/vendor/handlebars-v4.0.5.js "></script>
+    <script src="src/js/main.js"></script>
+</body>
+
+</html>
