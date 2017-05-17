@@ -1,5 +1,7 @@
 Medium-Crossover. The medium-rare version.
 
+https://dhackelman.github.io/medium-crossover/
+
 Rails API for a copy of medium.com
 
 Description
