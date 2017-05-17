@@ -1,24 +1,19 @@
-# README
+Medium-Crossover. The medium-rare version.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails API for a copy of medium.com
 
-Things you may want to cover:
+Description
 
-* Ruby version
+• Rails API only JSON REST API for basic CRUD behavior.
 
-* System dependencies
+• Support for searching, sorting, filtering, and pagination.
 
-* Configuration
+• Support for CORS. App is hosted on a different domain at Heroku and consumed from a Github Pages hosted JavaScript app.
 
-* Database creation
+Contributors
 
-* Database initialization
+• Thomas Fitzpatrick (Backend)
 
-* How to run the test suite
+• Drew Hackelman (Frontend)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+• Scott Hsu (Frontend)
